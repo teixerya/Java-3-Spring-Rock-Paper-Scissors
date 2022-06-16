@@ -1,0 +1,29 @@
+h1{
+    color: forestgreen;
+}
+
+h2{
+    color: blueviolet;
+}
+
+h3{
+    color: cornflowerblue;
+}
+
+h3.error{
+    color: brown;
+}
+li.error{
+    font-style: italic;
+    color: brown;
+}
+
+footer{
+    text-align:center;
+}
+
+body{
+    background-color: burlywood;
+    font-size: 20px;
+    text-align:center;
+}

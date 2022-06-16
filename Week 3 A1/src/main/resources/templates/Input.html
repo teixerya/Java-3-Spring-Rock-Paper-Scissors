@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/main.css" th:href="@{main.css}">
+    <title>Input</title>
+</head>
+<body>
+<!--____________________________________-->
+
+<h1>RPS Game</h1>
+<form action="Output.html" th:action="@{Process}" th:object="${envelope}">
+
+
+
+    <h2>Pick your Weapon</h2>
+    <p>
+        <label><input type="radio" th:field="*{message}" th:value="0">Rock</label>
+        <label><input type="radio" th:field="*{message}" th:value="1">Paper</label>
+        <label><input type="radio" th:field="*{message}" th:value="2">Scissors</label>
+
+    </p>
+
+    <p>
+        <input type="submit" value="Play">
+    </p>
+
+</form>
+<!--____________________________________________-->
+    <h2>Roll the Dice</h2>
+
+
+<br><br>
+
+<footer>
+    <p>Programmer: Ryan Teixeira</p>
+    <p>Sheridan College</p>
+</footer>
+
+</body>
+</html>

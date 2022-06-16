@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/main.css" th:href="@{main.css}">
+    <title>Output</title>
+</head>
+<body>
+<h1>RPS Game</h1>
+
+<h2>Weapon Selected</h2>
+
+<label th:switch="${envelope.message}">
+
+    <p th:case="0">Rock</p>
+    <p th:case="1">Paper</p>
+    <p th:case="2">Scissors</p>
+
+</label>
+
+<img th:src="@{|images/rockpaperscissors/weapon_${envelope.message}.png|}">
+
+<br>
+----------------------------------------------------------
+<h2>Computer Weapon Selected</h2>
+
+<label th:switch="${envelope.number}">
+
+    <p th:case="1" >Rock</p>
+    <p th:case="2" >Paper</p>
+    <p th:case="3" >Scissors</p>
+
+</label>
+
+<img th:src="@{|images/rockpaperscissors/weapon_${(envelope.number)-1}.png|}">
+
+<br>
+----------------------------------------------------------
+
+<br><br>
+
+
+<label>Winner: <span th:text="${envelope.getWinner()}">Bart </span></label>
+<br>
+<img th:src="@{|images/winnerpicture/user_${envelope.winnerResult}.png|}">
+
+
+<br>
+
+    <a href="Input.html" th:href="@{Input}">Play Again</a>
+</p>
+<br><br>
+
+    <footer>
+    <p>Programmer: Ryan Teixeira</p>
+    <p>Sheridan College</p>
+    </footer>
+
+</body>
+</html>
